@@ -11,51 +11,10 @@ import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let window = UIWindow(frame:UIScreen.main.bounds)
-    private var referenceController: UIViewController?
-    private var googleUser: GIDGoogleUser?
-    
-    fileprivate func promptDrivePermission() {
-        let user = self.googleUser
-        let driveScope = "https://www.googleapis.com/auth/drive.readonly"
-        let grantedScopes = user?.grantedScopes
-        print("debug :: grantedScopes ::\(String(describing: grantedScopes))")
-        if grantedScopes == nil || !grantedScopes!.contains(driveScope) {
-            // Request additional Drive scope.
-            let additionalScopes = ["https://www.googleapis.com/auth/drive.readonly"]
-            guard let currentUser = GIDSignIn.sharedInstance.currentUser else {
-                return
-            }
-            self.referenceController = self.getTopController()
-            if let vc = self.referenceController {
-                currentUser.addScopes(additionalScopes, presenting: vc) { signInResult, error in
-                    // Check if the user granted access to the scopes you requested.
-                    
-                    if let error {
-                        print("debug :: error ::\(error)")
-                    }
-                }
-            }
-        } else {
-            // Query for music
-            GoogleDriveManager.shared.fetchFilesFromDrive()
-        }
-    }
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            let access_token = user?.accessToken.tokenString
-            GoogleDriveManager.shared.access_token = access_token
-            if error != nil || user == nil {
-                // Show the app's signed-out state.
-                print("debug :: error on app launch ::\(String(describing: error))")
-            } else {
-                // Show the app's signed-in state.
-                self.googleUser = user
-                addTask(self.promptDrivePermission)
-            }
-        }
         return true
     }
 
@@ -126,7 +85,7 @@ extension AppDelegate {
         
         handled = GIDSignIn.sharedInstance.handle(url)
         if handled {
-            print("debug :: handled ::\(handled)")
+            print("debug :: open url handled ::\(handled)")
             return true
         }
         
@@ -136,7 +95,7 @@ extension AppDelegate {
         return false
     }
     
-    private func getTopController() -> UIViewController? {
+    static func getTopController() -> UIViewController? {
         let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         
         if var topController = keyWindow?.rootViewController {

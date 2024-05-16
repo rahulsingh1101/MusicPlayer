@@ -11,6 +11,11 @@
 		1F0E5BFA2BF530A500687ED1 /* GoogleDriveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5BF92BF530A500687ED1 /* GoogleDriveManager.swift */; };
 		1F0E5BFF2BF5F6B700687ED1 /* ManageTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5BFE2BF5F6B700687ED1 /* ManageTasks.swift */; };
 		1F0E5C032BF660F900687ED1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5C022BF660F900687ED1 /* Endpoints.swift */; };
+		1F0E5C062BF6716800687ED1 /* HomeVieweModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5C052BF6716800687ED1 /* HomeVieweModel.swift */; };
+		1F0E5C082BF6720600687ED1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5C072BF6720600687ED1 /* HomeViewController.swift */; };
+		1F0E5C0A2BF6B37300687ED1 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5C092BF6B37300687ED1 /* ItemCell.swift */; };
+		1F0E5C102BF6C15800687ED1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5C0F2BF6C15800687ED1 /* LoginController.swift */; };
+		1F0E5C122BF6C1C900687ED1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E5C112BF6C1C900687ED1 /* LoginViewModel.swift */; };
 		1FAE71E42BF46DEB00CCA7CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE71E32BF46DEB00CCA7CA /* AppDelegate.swift */; };
 		1FAE71E62BF46DEB00CCA7CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE71E52BF46DEB00CCA7CA /* SceneDelegate.swift */; };
 		1FAE71E82BF46DEB00CCA7CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE71E72BF46DEB00CCA7CA /* ViewController.swift */; };
@@ -48,6 +53,11 @@
 		1F0E5BF92BF530A500687ED1 /* GoogleDriveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveManager.swift; sourceTree = "<group>"; };
 		1F0E5BFE2BF5F6B700687ED1 /* ManageTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTasks.swift; sourceTree = "<group>"; };
 		1F0E5C022BF660F900687ED1 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		1F0E5C052BF6716800687ED1 /* HomeVieweModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVieweModel.swift; sourceTree = "<group>"; };
+		1F0E5C072BF6720600687ED1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F0E5C092BF6B37300687ED1 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		1F0E5C0F2BF6C15800687ED1 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		1F0E5C112BF6C1C900687ED1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1FAE71E02BF46DEB00CCA7CA /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FAE71E32BF46DEB00CCA7CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FAE71E52BF46DEB00CCA7CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +118,18 @@
 			path = GoogleDrive;
 			sourceTree = "<group>";
 		};
+		1F0E5C042BF6713F00687ED1 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E5C052BF6716800687ED1 /* HomeVieweModel.swift */,
+				1F0E5C072BF6720600687ED1 /* HomeViewController.swift */,
+				1F0E5C092BF6B37300687ED1 /* ItemCell.swift */,
+				1F0E5C0F2BF6C15800687ED1 /* LoginController.swift */,
+				1F0E5C112BF6C1C900687ED1 /* LoginViewModel.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		1FAE71D72BF46DEB00CCA7CA = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +155,7 @@
 		1FAE71E22BF46DEB00CCA7CA /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				1F0E5C042BF6713F00687ED1 /* HomeScreen */,
 				1F0E5BF82BF5309300687ED1 /* GoogleDrive */,
 				1FAE71E32BF46DEB00CCA7CA /* AppDelegate.swift */,
 				1FAE71E52BF46DEB00CCA7CA /* SceneDelegate.swift */,
@@ -426,10 +449,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0E5C102BF6C15800687ED1 /* LoginController.swift in Sources */,
 				1F0E5BFA2BF530A500687ED1 /* GoogleDriveManager.swift in Sources */,
+				1F0E5C062BF6716800687ED1 /* HomeVieweModel.swift in Sources */,
 				1FAE71E82BF46DEB00CCA7CA /* ViewController.swift in Sources */,
 				1FAE71E42BF46DEB00CCA7CA /* AppDelegate.swift in Sources */,
+				1F0E5C0A2BF6B37300687ED1 /* ItemCell.swift in Sources */,
 				1F0E5C032BF660F900687ED1 /* Endpoints.swift in Sources */,
+				1F0E5C082BF6720600687ED1 /* HomeViewController.swift in Sources */,
+				1F0E5C122BF6C1C900687ED1 /* LoginViewModel.swift in Sources */,
 				1FAE71EE2BF46DEB00CCA7CA /* MusicPlayer.xcdatamodeld in Sources */,
 				1F0E5BFF2BF5F6B700687ED1 /* ManageTasks.swift in Sources */,
 				1FAE71E62BF46DEB00CCA7CA /* SceneDelegate.swift in Sources */,

@@ -17,11 +17,10 @@ class GoogleDriveManager {
     var access_token: String?
     
     private init() { }
-    
-    func fetchFilesFromDrive() {
+
+    func fetchFilesFromDrive(completion: @escaping (Result<DriveModel, Error>) -> Void) {
         guard let accessToken = access_token else {
-            print("Access token not available")
-            return
+            fatalError("nil access token. Handel this condition")
         }
         let header = ["Authorization": "Bearer \(accessToken)"]
         let getRequest = GetRequest<DriveModel>(url: URL(string: Endpoints().retrieve_all_files)!, headers: header)
@@ -30,8 +29,10 @@ class GoogleDriveManager {
             switch result {
             case .success(let response):
                 print("GET request succeeded with response: \(response)")
+                completion(.success(response))
             case .failure(let error):
                 print("GET request failed with error: \(error)")
+                completion(.failure(error))
             }
         }
     }
