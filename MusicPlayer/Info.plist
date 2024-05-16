@@ -21,5 +21,21 @@
 			</array>
 		</dict>
 	</dict>
+    <key>GIDClientID</key>
+    <string>506062201332-50ppsfr2de2i11dinouteo9ecg5793q9.apps.googleusercontent.com</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.506062201332-50ppsfr2de2i11dinouteo9ecg5793q9</string>
+        </array>
+      </dict>
+    </array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>googledrive</string>
+        <string>google-drive</string>
+    </array>
 </dict>
 </plist>

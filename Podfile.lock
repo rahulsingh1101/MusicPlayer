@@ -1,0 +1,60 @@
+PODS:
+  - AppAuth (1.7.5):
+    - AppAuth/Core (= 1.7.5)
+    - AppAuth/ExternalUserAgent (= 1.7.5)
+  - AppAuth/Core (1.7.5)
+  - AppAuth/ExternalUserAgent (1.7.5):
+    - AppAuth/Core
+  - CodableDataModel (1.0.0)
+  - GoogleAPIClientForREST/Core (3.5.4):
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
+  - GoogleAPIClientForREST/Drive (3.5.4):
+    - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
+  - GoogleSignIn (7.1.0):
+    - AppAuth (< 2.0, >= 1.7.3)
+    - GTMAppAuth (< 5.0, >= 4.1.1)
+    - GTMSessionFetcher/Core (~> 3.3)
+  - GTMAppAuth (4.1.1):
+    - AppAuth/Core (~> 1.7)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3)
+  - GTMSessionFetcher/Core (3.4.1)
+  - GTMSessionFetcher/Full (3.4.1):
+    - GTMSessionFetcher/Core
+  - NetworkModule/Implementation (1.0.0)
+  - NetworkModule/Protocols (1.0.0)
+
+DEPENDENCIES:
+  - CodableDataModel (from `./Modules/CodableDataModel`)
+  - GoogleAPIClientForREST/Drive
+  - GoogleSignIn
+  - GTMSessionFetcher/Core
+  - NetworkModule/Implementation (from `./Modules/NetworkModule`)
+  - NetworkModule/Protocols (from `./Modules/NetworkModule`)
+
+SPEC REPOS:
+  trunk:
+    - AppAuth
+    - GoogleAPIClientForREST
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
+
+EXTERNAL SOURCES:
+  CodableDataModel:
+    :path: "./Modules/CodableDataModel"
+  NetworkModule:
+    :path: "./Modules/NetworkModule"
+
+SPEC CHECKSUMS:
+  AppAuth: 501c04eda8a8d11f179dbe8637b7a91bb7e5d2fa
+  CodableDataModel: bcf79ee93b59c3d9ffb1ae42c605b8de5ced4fdb
+  GoogleAPIClientForREST: 82fc3df6bbb59b226ac0bf6b638d38b31004f07e
+  GoogleSignIn: d4281ab6cf21542b1cfaff85c191f230b399d2db
+  GTMAppAuth: f69bd07d68cd3b766125f7e072c45d7340dea0de
+  GTMSessionFetcher: 8000756fc1c19d2e5697b90311f7832d2e33f6cd
+  NetworkModule: f1312e387a04289dd650aec3400da2ce1a77232a
+
+PODFILE CHECKSUM: f16ce3290955bcea74b5ac4fa113bbee98c4aead
+
+COCOAPODS: 1.15.2
